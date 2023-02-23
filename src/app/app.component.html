@@ -1,0 +1,25 @@
+<!--Header-->
+<app-cabecero
+  [ingreso] = "getIngresoTotal()"
+  [egreso]="getEgresoTotal()"
+  [porcentaje]="getPorcentajeTotal()"
+  [presupuesto]="getPresupuestoTotal()"
+></app-cabecero>
+
+
+<!--Form-->
+<app-formulario></app-formulario>
+
+<!--Section-->
+  <div class="contenedor limpiarEstilos">
+
+    <!--seccion de Ingresos-->
+    <app-ingreso></app-ingreso>
+
+
+    <!--Seccion de Egresos-->
+    <app-egreso
+      [ingresoTotal]="getIngresoTotal()"
+    ></app-egreso>
+
+  </div>
